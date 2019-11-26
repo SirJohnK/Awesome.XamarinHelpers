@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>sirjohnk.ico</ApplicationIcon>
+    <Authors>Johan Svensson</Authors>
+    <Title>Awesome.XamarinHelpers</Title>
+    <Description>A collection of awesome Xamarin helper classes and extensions.</Description>
+    <PackageProjectUrl>https://github.com/SirJohnK/Awesome.XamarinHelpers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SirJohnK/Awesome.XamarinHelpers</RepositoryUrl>
+    <Version>1.0.0-beta</Version>
+    <Copyright>© 2019 Johan Svensson All Rights Reserved</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>sirjohnk.png</PackageIcon>
+    <PackageTags>dotnet,dotnet-standard,extension-methods</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="True" PackagePath="" />
+    <None Include="sirjohnk.png" Pack="True" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+  </ItemGroup>
+</Project>
