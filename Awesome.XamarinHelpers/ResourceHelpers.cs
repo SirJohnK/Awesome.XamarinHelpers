@@ -5,9 +5,9 @@ using Xamarin.Forms.Internals;
 
 namespace Awesome.XamarinHelpers
 {
-    public static class ResourcesUtility
+    public static class ResourceHelpers
     {
-        private static T GetResource<T>(object? resource)
+        private static T GetResource<T>(object? resource, T defaultValue)
         {
             //Verify Parameter
             if (resource == null)
@@ -18,11 +18,36 @@ namespace Awesome.XamarinHelpers
             {
                 case OnPlatform<T> value:
                     //Get platform specific resource
-                    return GetResource<T>(value.Platforms?.FirstOrDefault(p => p.Platform.Contains(Device.RuntimePlatform))?.Value);
+                    return GetResource<T>(value.Platforms?.FirstOrDefault(p => p.Platform.Contains(Device.RuntimePlatform))?.Value, defaultValue);
+
+                case OnIdiom<T> value:
+                    {
+                        //Get idiom specific resource
+                        switch (Device.Idiom)
+                        {
+                            case TargetIdiom.Phone:
+                                return value.Phone;
+
+                            case TargetIdiom.Tablet:
+                                return value.Tablet;
+
+                            case TargetIdiom.Desktop:
+                                return value.Desktop;
+
+                            case TargetIdiom.TV:
+                                return value.TV;
+
+                            case TargetIdiom.Watch:
+                                return value.Watch;
+
+                            default:
+                                return defaultValue;
+                        }
+                    }
 
                 case DynamicResource value:
                     //Get dynamic resource
-                    return FindResource<T>(value.Key);
+                    return FindResource<T>(value.Key, defaultValue);
 
                 case string value:
                     {
@@ -33,7 +58,7 @@ namespace Awesome.XamarinHelpers
                         }
                         catch
                         {
-                            return default;
+                            return defaultValue;
                         }
                     }
 
@@ -43,23 +68,23 @@ namespace Awesome.XamarinHelpers
 
                 default:
                     //Return default resource value
-                    return default;
+                    return defaultValue;
             }
         }
 
-        public static T FindResource<T>(string resourceKey)
+        public static T FindResource<T>(string resourceKey, T defaultValue)
         {
             //Verify parameter
             if (string.IsNullOrWhiteSpace(resourceKey))
-                return default;
+                return defaultValue;
 
             //Attempt to find resource
             if (Application.Current.Resources.TryGetValue(resourceKey, out var resource))
                 //Get resource
-                return GetResource<T>(resource);
+                return GetResource<T>(resource, defaultValue);
             else
                 //If nothing found, return default
-                return default;
+                return defaultValue;
         }
     }
 }
