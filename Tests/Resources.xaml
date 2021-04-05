@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="Tests.Resources"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="FirstColor">Red</Color>
+    <Color x:Key="SecondColor">Green</Color>
+    <Color x:Key="ThirdColor">Blue</Color>
+
+    <x:String x:Key="HelloAndroid">Hello Android World!</x:String>
+    <x:String x:Key="HelloiOS">Hello iOS World!</x:String>
+
+    <OnIdiom
+        x:Key="IdiomColor"
+        x:TypeArguments="Color"
+        Desktop="{StaticResource FirstColor}"
+        Phone="{StaticResource SecondColor}"
+        Tablet="{StaticResource ThirdColor}" />
+
+    <OnPlatform
+        x:Key="PlatformColor"
+        x:TypeArguments="Color"
+        Default="Yellow">
+        <On Platform="Android" Value="{StaticResource FirstColor}" />
+        <On Platform="iOS" Value="{StaticResource SecondColor}" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="RuntimeColor"
+        x:TypeArguments="Color"
+        Default="White">
+        <On Platform="Android" Value="{DynamicResource SecondColor}" />
+        <On Platform="iOS" Value="{DynamicResource ThirdColor}" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="IntroText"
+        x:TypeArguments="x:String"
+        Default="Hello World!">
+        <On Platform="Android" Value="{DynamicResource HelloAndroid}" />
+        <On Platform="iOS" Value="{DynamicResource HelloiOS}" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="PlatformIdiomColor"
+        x:TypeArguments="Color"
+        Default="Yellow">
+        <On Platform="Android">
+            <OnIdiom
+                x:TypeArguments="Color"
+                Default="{StaticResource FirstColor}"
+                Phone="{StaticResource ThirdColor}"
+                Tablet="{StaticResource SecondColor}" />
+        </On>
+        <On Platform="iOS">
+            <OnIdiom
+                x:TypeArguments="Color"
+                Default="{StaticResource SecondColor}"
+                Phone="{StaticResource FirstColor}"
+                Tablet="{StaticResource ThirdColor}" />
+        </On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="DefaultFontSize"
+        x:TypeArguments="x:Double"
+        Default="10">
+        <On Platform="Android" Value="15" />
+        <On Platform="iOS" Value="17" />
+    </OnPlatform>
+</ResourceDictionary>

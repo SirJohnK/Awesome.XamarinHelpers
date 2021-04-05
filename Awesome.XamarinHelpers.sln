@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awesome.XamarinHelpers", "Awesome.XamarinHelpers\Awesome.XamarinHelpers.csproj", "{6CDC6714-8F81-4B98-B79E-3D209F6E8547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awesome.XamarinHelpers", "Awesome.XamarinHelpers\Awesome.XamarinHelpers.csproj", "{6CDC6714-8F81-4B98-B79E-3D209F6E8547}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{CD49662C-8AF6-4A5C-AF40-72BC47C5F793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{CD49662C-8AF6-4A5C-AF40-72BC47C5F793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{4EE56000-5428-453E-B482-B7DEF1AA69BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsole", "TestConsole\TestConsole.csproj", "{4EE56000-5428-453E-B482-B7DEF1AA69BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
