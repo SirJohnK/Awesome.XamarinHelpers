@@ -8,6 +8,7 @@
     <Color x:Key="SecondColor">Green</Color>
     <Color x:Key="ThirdColor">Blue</Color>
 
+    <x:String x:Key="HelloWorld">Hello World!</x:String>
     <x:String x:Key="HelloAndroid">Hello Android World!</x:String>
     <x:String x:Key="HelloiOS">Hello iOS World!</x:String>
 

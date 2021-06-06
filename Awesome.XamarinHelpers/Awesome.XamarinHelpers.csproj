@@ -11,7 +11,7 @@
     <PackageProjectUrl>https://github.com/SirJohnK/Awesome.XamarinHelpers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SirJohnK/Awesome.XamarinHelpers</RepositoryUrl>
     <Version>1.0.0-beta</Version>
-    <Copyright>© 2019 Johan Svensson All Rights Reserved</Copyright>
+    <Copyright>© 2021 Johan Svensson All Rights Reserved</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>sirjohnk.png</PackageIcon>
     <PackageTags>dotnet,dotnet-standard,extension-methods</PackageTags>
