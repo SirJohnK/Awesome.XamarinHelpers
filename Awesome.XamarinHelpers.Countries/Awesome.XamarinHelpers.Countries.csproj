@@ -11,6 +11,7 @@
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <ApplicationIcon>sirjohnk.ico</ApplicationIcon>
+    <Title>Awesome.XamarinHelpers.Countries</Title>
     <Version>1.0.0-beta</Version>
     <Authors>Johan Svensson</Authors>
     <Copyright>© 2021 Johan Svensson All Rights Reserved</Copyright>
@@ -20,8 +21,9 @@
     <RepositoryUrl>https://github.com/SirJohnK/Awesome.XamarinHelpers</RepositoryUrl>
     <PackageIcon>sirjohnk.png</PackageIcon>
     <PackageIconUrl />
-    <PackageTags>dotnet,dotnet-standard,countries,flags</PackageTags>
+    <PackageTags>dotnet,dotnet-standard,countries,flags,xamarin</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
