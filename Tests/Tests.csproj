@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Awesome.XamarinHelpers.Countries\Awesome.XamarinHelpers.Countries.csproj" />
     <ProjectReference Include="..\Awesome.XamarinHelpers\Awesome.XamarinHelpers.csproj" />
   </ItemGroup>
 </Project>
